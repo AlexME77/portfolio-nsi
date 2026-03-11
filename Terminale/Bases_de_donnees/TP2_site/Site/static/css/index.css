@@ -1,0 +1,130 @@
+
+body {
+	font-size:15px;
+	color: #ff0000;
+	position: relative;
+	text-align: left;
+}
+
+
+h1 {
+	background-color:#0000ff;
+	position: absolute;
+	text-align:center;
+	top: 10vh;
+	left: 40vw;
+}
+
+h1:hover {
+	background-color:#ff00ff;
+	text-align:center;
+}
+
+
+.logo {
+	position: absolute;
+	top: 10vh;
+	left: 80vw;
+}
+
+.login {
+	position: absolute;
+	top: 50vh;
+	left: 40vw;
+}
+
+.pwd {
+	position: absolute;
+	top: 55vh;
+	left: 40vw;
+}
+
+.btn {
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+}
+
+.btnS {
+	position: absolute;
+	top: 60vh;
+	left: 45vw;
+}
+
+.compte {
+	position: absolute;
+	top: 65vh;
+	left: 40vw;
+	color: blue;
+	font-size: 1vmax;
+}
+.compte:hover {
+	text-decoration: underline;
+}
+.lab {
+	position: absolute;
+	top: 30vh;
+	left: 10vw;
+	color: white;
+	font-size: 5vmax;
+}
+.lab2 {
+	position: absolute;
+	top: 30vh;
+	left: 10vw;
+	color: black;
+	font-size: 5vmax;
+}
+.lab3 {
+	position: absolute;
+	top: 50vh;
+	left: 10vw;
+	color: blue;
+	font-size: 3vmax;
+}
+.lab3:hover {
+	text-decoration: underline;
+}
+.deconn {
+	position: absolute;
+	top: 70vh;
+	left: 40vw;
+}
+.info {
+	position: absolute;
+	top: 50vh;
+	left: 40vw;
+	font-size: 40px;
+}
+
+.time {
+	position: absolute;
+	top: 80vh;
+	left: 40vw;
+}
+
+.commentaire {
+	position: absolute;
+	top: 90vh;
+	left: 5vw;
+}
+
+.login1 {
+	position: absolute;
+	top: 45vh;
+	left: 40vw;
+}
+
+
+.pwd1 {
+	position: absolute;
+	top: 50vh;
+	left: 40vw;
+}
+
+
+.pwd2 {
+	position: absolute;
+	top: 55vh;
+	left: 40vw;
+}

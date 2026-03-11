@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" onclick="demander_prenom()">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple 2</title>
+    <script>
+        function demander_prenom() {
+            // On demande à l'utilisateur de saisir son prénom.
+            let saisie = prompt("Quel est ton prénom ?");
+
+            // On affiche le prénom dans la console javascript accessible depuis le mode développeur du navigateur.
+            console.log(saisie);
+
+            // Écriture du message dans la page HTML
+            document.getElementById("message").innerHTML = "Bonjour <strong>" + saisie + "</strong> !";
+        };
+    </script>
+</head>
+<body>
+    <h1>Exemple 2 - Code Javascript non bloquant</h1>   
+    <p id="message"></p>
+</body>
+</html>

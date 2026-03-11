@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Base de données</title>
+</head>
+<body>
+  <h1>Fiche élève NSI</h1>
+  <form method="POST" action="https://europe-west1-mulot-nsi.cloudfunctions.net/handle-post">
+    <h2>Informations personnelles</h2>
+    Nom :
+    <input type="text" name="nom">
+    <br>
+    Prénom : 
+    <input type="text" name="prenom">
+    <br>
+    <h2>Informations scolaires</h2>
+    Année scolaire : 
+    <input type="text" name="annee_scolaire">
+    <br>
+    Autres options suivies : 
+    <input type="checkbox" name="options" value="Mathématiques">
+    Mathématiques
+    <input type="checkbox" name="options" value="Physique-Chimie">
+    Physique-Chimie
+    <input type="checkbox" name="options" value="NSI">
+    NSI
+    <br>
+    Pousuite de l'option : 
+    <input type="radio" value=1 name="poursuite">
+    Oui
+    <input type="radio" value=0 name="poursuite">
+    Non
+    <br>
+    <select name="classe">
+      <option value="1">1ère01</option>
+      <option value="2">1ère02</option>
+      <option value="3">1ère03</option>
+      <option value="4">1ère04</option>
+      <option value="5">1ère05</option>
+      <option value="6">1ère06</option>
+      <option value="7">1ère07</option>
+      <option value="8">1ère08</option>
+      <option value="9">1ère09</option>
+      <option value="10">1ère10</option>
+    </select>
+    <br>
+    <input type="submit">
+  </form>
+  
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple 3</title>
+    <script>
+        function traiter_nom() {
+            // On demande à l'utilisateur de saisir son prénom.
+            let saisie_prenom = document.getElementById("prenom").value;
+            let saisie_nom = document.getElementById("nom").value;
+
+            // On affiche le prénom dans la console javascript accessible depuis le mode développeur du navigateur.
+            console.log(saisie_prenom);
+            console.log(saisie_nom);
+
+            // Écriture du message dans la page HTML
+            document.getElementById("message").innerHTML = "Bonjour <strong>" + saisie_nom + " " + saisie_prenom + "</strong> !";
+        };
+    </script>
+</head>
+<body>
+    <h1>Exemple 3 - Interface web</h1>
+    <p>
+        Prénom <input type="text" id="prenom">
+        Nom <input type="text" id="nom">
+        <input type="button" value="Lancer le programme" onclick="traiter_nom()"></p>
+    <p id="message"></p>
+</body>
+</html>

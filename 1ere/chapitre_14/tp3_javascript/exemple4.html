@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple 4</title>
+    <script>
+        function traiter_prenom() {
+            // On demande à l'utilisateur de saisir son prénom.
+            let saisie = document.getElementById("prenom").value;
+
+            // On affiche le prénom dans la console javascript accessible depuis le mode développeur du navigateur.
+            console.log(saisie);
+
+            // Écriture du message dans la page HTML
+            if (saisie) {
+                document.getElementById("message").innerHTML = "Bonjour <strong>" + saisie + "</strong> !";
+            } else {
+                document.getElementById("message").innerHTML = "";
+            }
+
+            // Changement de la couleur du texte selon la longueur du prénom
+            valide = true
+            blacklist = ["toto", "tata", "titi", "tutu", "tete", "tyty"]
+            blacklist.forEach((element) => {
+                console.log(element)
+                if (saisie.includes(element)) {
+                valide = false;
+            }   
+            });
+            if (!valide){
+             document.getElementById("message").style.color = "red";
+        }
+            else{
+                document.getElementById("message").style.color = "";
+            }
+    }
+    </script>
+</head>
+<body>
+<h1>Exemple 4 - Interface web</h1>
+<p>
+    Prénom <input type="text" id="prenom" onkeyup="traiter_prenom()">
+</p>
+<p id="message"></p>
+</body>
+</html>
