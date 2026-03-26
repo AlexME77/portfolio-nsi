@@ -1,12 +1,6 @@
 import csv
 import fonctions
 
-#Faire les commentaires et les docstrings
-#Voir pour decouper en plusd de fonctions
-#Voir pour faire plutot des parcours par valeur et pas par indice selon les situations
-#Tout passer à chatgpt ou autre trucs qui verifie les erreurs ou améliore le code
-
-
 def data():
     '''
     Choix de la base de données
@@ -205,39 +199,91 @@ def lister(tab, tri=None):
 def infos(tab):
     '''
     Affiche les infos d'un film
+
+    tab -- tableau de dictionnaires contenant les films sur lequel on veut lister
     '''
     # Si le tableau est vide
     if len(tab)==0:
         print("\nVous n'avez aucunes données pour le moment, ajouter en pour pouvoir faire des traitements")
     # Si le tableau n'est pas vide
     else:
-        # Demande à l'utilisateur de choisir un film
-        reponse=0
-        while not 1<=reponse<=len(tab):
+        # Choix du traitement
+        traitement=0
+        while not 1<=traitement<=2:
             try:
-                lister(tab, tri=1)
-                reponse = int(input("\nSur quelle film voulez vous en savoir plus ? : "))
-                # Si le choix est valide
-                if 1<=reponse<=len(tab):
-                    film = tab[reponse - 1]
-                    # Affichage des infos du film
-                    print("\n---"+tab[reponse-1]["nom"]+"---\n")
-                    for cle, valeur in film.items():
-                        if  cle == 'duree':
-                            print(cle, ":", int(valeur)//60,"h",int(valeur)-(int(valeur)//60)*60)
-                        elif cle == 'note':
-                            print(cle, ':', str(valeur)+'/5')
-                        else:
-                            print(cle, ":", valeur)
-                # Si le choix n'est pas valide
+                traitement=int(input('\n---Choix du traitement---\n\n 1 : Lister les films\n 2 : Rechercher avec un mot clé\n\nQue veux-tu faire ? : '))
+                if traitement==1:
+                    reponse=0
+                    while not 1<=reponse<=len(tab):
+                        try:
+                            # Affiche la liste des films
+                            lister(tab, tri=1)
+                            # Demande à l'utilisateur de choisir un film
+                            reponse = int(input("\nSur quelle film voulez vous en savoir plus ? : "))
+                            # Si le choix est valide
+                            if 1<=reponse<=len(tab):
+                                film = tab[reponse - 1]
+                                # Affichage des infos du film
+                                print("\n---"+film["nom"]+"---\n")
+                                for cle, valeur in film.items():
+                                    if  cle == 'duree':
+                                        print(cle, ":", int(valeur)//60,"h",int(valeur)-(int(valeur)//60)*60)
+                                    elif cle == 'note':
+                                        print(cle, ':', str(valeur)+'/5')
+                                    else:
+                                        print(cle, ":", valeur)
+                            # Si le choix n'est pas valide
+                            else:
+                                print("\nle choix doit être compris entre 1 et", len(tab), "réessayer")
+                        except ValueError:
+                            print("\nle choix doit être compris entre 1 et", len(tab), "réessayer")
+                elif traitement==2:
+                    # Demande à l'utilisateur de choisir un mot clé
+                    recherche = str(input("\n---Recherche---\n\nQuel film veux-tu rechercher ? : "))
+                    # Parcourt le tableau pour trouver les films qui contiennent le mot clé
+                    liste_recherche=[]
+                    for valeur in tab:
+                        if recherche in valeur["nom"]:
+                            liste_recherche.append(valeur)
+                    if len(liste_recherche)==0:
+                        print("\nAucun film ne correspond à votre recherche")
+                    else:
+                        # Affiche la liste des films qui contiennent le mot clé
+                        print("\n---Résultat de la recherche---\n")
+                        for indice in range(len(liste_recherche)):
+                            print(indice+1, ":", liste_recherche[indice]["nom"])
+                        reponse=0
+                        while not 1<=reponse<=len(liste_recherche):
+                            try:
+                                # Demande à l'utilisateur de choisir un film parmis ceux qui ont le mot clé
+                                reponse = int(input("\nSur quelle film voulez vous en savoir plus ? : "))
+                                # Si le choix est valide
+                                if 1<=reponse<=len(liste_recherche):
+                                    film = liste_recherche[reponse - 1]
+                                    # Affichage des infos du film
+                                    print("\n---"+film["nom"]+"---\n")
+                                    for cle, valeur in film.items():
+                                        if  cle == 'duree':
+                                            print(cle, ":", int(valeur)//60,"h",int(valeur)-(int(valeur)//60)*60)
+                                        elif cle == 'note':
+                                            print(cle, ':', str(valeur)+'/5')
+                                        else:
+                                            print(cle, ":", valeur)
+                                # Si le choix n'est pas valide
+                                else:
+                                    print("\nle choix doit être compris entre 1 et", len(tab), "réessayer")
+                            except ValueError:
+                                print("\nle choix doit être compris entre 1 et", len(tab), "réessayer")
                 else:
-                    print("\nle choix doit être compris entre 1 et", len(tab), "réessayer")
+                    print("\nLe choix doit être compris entre 1 et 2, réessayer")
             except ValueError:
-                print("\nle choix doit être compris entre 1 et", len(tab), "réessayer")
+                print("\nLe choix doit être compris entre 1 et 2, réessayer")
     
 def ajouter(tab):
     '''
     Ajoute un film au tableau
+
+    tab -- tableau de dictionnaires contenant les films sur lequel on veut ajouter
     '''
     # Création d'un nouveau film
     tab.append({})
@@ -294,6 +340,8 @@ def ajouter(tab):
 def modifier(tab):
     '''
     Modifie une donnée d'un film
+
+    tab -- tableau de dictionnaires contenant les films sur lequel on veut modifier
     '''
     # Si le tableau est vide
     if len(tab)==0:
@@ -391,6 +439,11 @@ def modifier(tab):
                 print("\nle choix doit être compris entre 1 et", len(tab), "réessayer")
 
 def supprimer(tab):
+    """
+    Supprime un film du tableau
+
+    tab -- tableau de dictionnaires contenant les films sur lequel on veut supprimer
+    """
     # Vérifie si le tableau est vide
     if len(tab)==0:
         print("\nVous n'avez aucunes données pour le moment, ajouter en pour pouvoir faire des traitements")
@@ -412,12 +465,17 @@ def supprimer(tab):
                 print("\nle choix doit être compris entre 1 et", len(tab), "réessayer")
 
 def sauvegarder(tab):
+    """
+    Sauvegarde le tableau dans un fichier
+
+    tab -- tableau de dictionnaires contenant les films sur lequel on veut sauvegarder
+    """
     nom=""
     # Vérifie si le nom du fichier est valide
     while nom.endswith(".csv")==False:
         # Demande le nom du fichier à l'utilisateur
         print("\n---Sauvegarde---\n")
-        nom = str(input("Donne moi le nom que tu veux donner au fichier .csv (sans oublier l'extension .cvs à la fin !!!) : "))
+        nom = str(input("Donne moi le nom que tu veux donner au fichier .csv (sans oublier l'extension .csv à la fin !!!) : "))
         if nom.endswith('.csv')==False:
             print("\nLe fichier doit être un fichier .csv, réessayer")
         else:

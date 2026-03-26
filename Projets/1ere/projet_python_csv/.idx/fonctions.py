@@ -31,3 +31,4 @@ def tri_dictionnaire_decroissant(tab, descripteur):
         temp=tab[i]
         tab[i]=tab[indice_max]
         tab[indice_max]=temp
+

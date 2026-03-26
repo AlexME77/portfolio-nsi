@@ -1,6 +1,3 @@
-# Consignes : charger le csv, lister, supprimer, ajouter ou modifier des données, faire une fonction par personne (ex : tous les films que j'ai pas vu, ...)
-# Demander au prof pour la recherche si c'est nécessaire
-
 import csv
 import fonctions
 import menu
