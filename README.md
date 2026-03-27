@@ -1,20 +1,18 @@
 # Portfolio – Travaux en Informatique
 
-Ce dépôt GitHub regroupe une sélection de mes travaux réalisés au lycée, principalement dans le cadre de la spécialité **Numérique et Sciences Informatiques (NSI)** ainsi que certains projets personnels.
+Ce dépôt GitHub regroupe une sélection de mes travaux réalisés au lycée dans le cadre de la spécialité **Numérique et Sciences Informatiques (NSI)**.
 
-L'objectif de ce repository est de présenter mon travail, mes projets et mon intérêt pour l'informatique aux établissements auxquels je candidate sur Parcoursup.
+L'objectif de ce repository est de présenter mon travail, mes projets, mes compétences et mon intérêt pour l'informatique aux établissements auxquels je candidate sur Parcoursup.
 
 ---
 
 ## Première
 
-Travaux pratiques et exercices réalisés durant l'année de Première.
+Les énoncés des TP sont disponible sur le [Site de mon professeur de NSI](https://github.com/AlexME77/projet-nsi)
 
 ## Terminale
 
-Travaux pratiques et projets réalisés durant l'année de Terminale dans le cadre de la spécialité NSI.
-
-Chaque dossier correspond à un **TP ou à un projet spécifique**.
+Chaque dossier correspond à un **chapitre ou une notion spécifique**. Les énoncés des TP sont disponibles à l'intérieur des dossiers.
 
 ---
 
@@ -25,12 +23,15 @@ Selon les projets, différents outils et langages sont utilisés :
 * Python
 * Algorithmique
 * Programmation
+* phpMyAdmin
+* dbBrowser for SQLite
+* Cisco Packet Tracer
 * Git et GitHub
 
 ---
 
 ## À propos
 
-Ces travaux reflètent mon apprentissage progressif de l'informatique et mon intérêt pour la programmation et la résolution de problèmes algorithmiques.
+Ces travaux reflètent mon apprentissage progressif de l'informatique, mon intérêt pour la programmation et la résolution de problèmes algorithmiques.
 
 Ce dépôt a pour objectif de présenter une partie des travaux que j'ai réalisés durant mon parcours au lycée.
