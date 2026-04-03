@@ -2,9 +2,7 @@
 
 Ce dépôt GitHub regroupe une sélection de mes travaux réalisés au lycée dans le cadre de la spécialité **Numérique et Sciences Informatiques (NSI)**.
 
-L'objectif de ce dépôt est de présenter mon travail, mes projets et mes compétences aux établissements auxquels je candidate sur Parcoursup. 
-
-Je m'intéresse particulièrement à la programmation, à l'algorithmique et au développement de projets informatiques. 
+L'objectif de ce dépôt est de présenter mon travail, mes projets et mes compétences aux établissements auxquels je candidate sur Parcoursup.
 
 ---
 
@@ -41,9 +39,3 @@ Selon les projets, différents outils et langages sont utilisés :
 Projet réalisé en Terminale dans le cadre de la spécialité NSI. Ce projet constitue un travail plus approfondi intégrant plusieurs notions du programme.
 
 ➡️ [Voir le projet sur GitHub](https://github.com/AlexME77/projet-nsi)
-
-## À propos
-
-Ces travaux reflètent mon apprentissage progressif de l'informatique, mon intérêt pour la programmation et la résolution de problèmes algorithmiques.
-
-Ce dépôt a pour objectif de présenter une partie des travaux que j'ai réalisés durant mon parcours au lycée.
