@@ -25,6 +25,7 @@ Les énoncés des TP sont disponibles à l'intérieur des dossiers.
 Selon les projets, différents outils et langages sont utilisés :
 
 * Python
+* HTML/CSS
 * Algorithmique et structures de données
 * Bases de données (SQLite, phpMyAdmin)
 * Réseaux (Cisco Packet Tracer)
